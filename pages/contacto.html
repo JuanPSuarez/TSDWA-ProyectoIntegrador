@@ -62,22 +62,30 @@
     </nav>
 
     <div class="container mt-5 py-5">
-        <h1>Ponte en contacto con nosotros</h1>
+        <h1 class="mb-4">Ponte en contacto con nosotros</h1>
         <form action="../index.html">
             <!-- Nombre -->
-            <label for="nombre">Nombre</label><br>
-            <input type="text" id="nombre" value="" required><br><br>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
             <!-- Correo -->
-            <label for="correo">Correo</label><br>
-            <input type="email" id="email" value="" required><br><br>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
             <!-- Teléfono -->
-            <label for="telefono">Teléfono</label><br>
-            <input type="number" id="telefono" value="" required inputmode="numeric"><br><br>
-            <!-- Mensaje  -->
-            <label for="mensaje">Mensaje</label><br>
-            <textarea id="mensaje" rows="4" style="resize: both;" required></textarea><br><br>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="number" class="form-control" id="telefono" required inputmode="numeric">
+            </div>
+            <!-- Mensaje -->
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" style="resize: both;" required></textarea>
+            </div>
             <!-- Boton Enviar -->
-            <input type="submit" value="Enviar" onclick="showAlert()">
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
 
