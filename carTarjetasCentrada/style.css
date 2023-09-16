@@ -1,0 +1,201 @@
+:root{
+    --light: #E2E2E2;
+    --primary: rgb(9, 9, 71);
+    --secondary: rgb(70, 70, 55);
+}
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--light);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+img{
+    width: 100%;
+    display: block;
+}
+h1 {
+    color: var(--secondary);
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card-header{
+    height: 200px;
+    width: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+.card-title{
+    text-align: center;
+    margin: 0;
+}
+.card-description{
+    flex-grow: 1;
+}
+.card-header img{
+    border-radius: 10px 10px 0 0;
+}
+.card-body{
+    border-radius: 0 0 10px 10px;
+    background-color: #ccc;
+    padding: 20px 15px;
+    text-align: justify;
+    border: 1px solid #ccc;
+}
+.btn{
+    display: block;
+    background-color: var(--secondary);
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+@media(min-width: 480px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:  10px;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-body{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+body {
+    background-image: url("https://media.istockphoto.com/id/184652566/es/foto/lona-fondo-gris.jpg?s=1024x1024&w=is&k=20&c=JoIBOD3GF7ETTSIrTrWXeIF6zdp18YE32d3m25CxtKw=");
+  }
+  
+  .container {
+    border: 2px solid white;
+    box-shadow: inset 0 0 5px #0000ff, 0 0 10px #0000ff;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #444444;
+  }
+
+
+
+  .container2 {
+    border: 2px solid white;
+    box-shadow: inset 0 0 5px #0000ff, 0 0 10px #0000ff;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 140px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #444444;
+  }
+
+
+
+
+  .carousel-control-prev-icon {
+    background-color: #00008B;
+    border: 40px #00008B;
+  }
+
+  .carousel-control-next-icon{
+    background-color: #00008B;
+    border: 20px #00008B;
+    outline: 12px #0000ff 
+  }
+
+  .carousel-inner{
+    border: 20px #00008B;
+    outline: 12px #0000ff
+  }
+
+  .neon {
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 0 0 5px #00008B, 0 0 15px #00008B, 0 0 30px #00008B, 0 0 50px #00008B;
+  }
+  
+  .neon2 {
+    font-family: monospace;
+    letter-spacing: 8px;
+    margin: 0;
+    font-size: 70px;
+    text-shadow: 0 0 5px #87CEEB, 0 0 15px #87CEEB, 0 0 30px #87CEEB;
+    color:black
+  }
+  
+  .neon2-1{
+    font-family: monospace;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 100px;
+    text-shadow: 0 0 5px #87CEEB, 0 0 15px #87CEEB, 0 0 30px #87CEEB;
+    color:black
+  }
+
+  .neon3 {
+    font-family: monospace;
+    letter-spacing: 20px;
+    margin: 0;
+    font-size: 20px;
+    text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+  }
+
+  .todosL {
+    font-family: monospace;
+    letter-spacing: 20px;
+    margin: 0;
+    font-size: 100%;
+    text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+    letter-spacing: 20px;
+  }
+
+  .conContainer{
+    background-image: url("https://previews.123rf.com/images/yershovoleksandr/yershovoleksandr1608/yershovoleksandr160800022/60611650-diferentes-categor%C3%ADas-de-libros-y-temas-g%C3%A9neros-de-la-literatura-la-ciencia-y-la-fantas%C3%ADa-drama-y.jpg");
+    padding: 250px;
+  }
+
+
+  .divisionGeneral {
+    margin: auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 900px;
+    background-color: #444;
+  }
+
+  .flicker1 {
+    animation: parpadear 2s infinite backwards steps(3);
+  }
+  .flicker2 {
+    animation: parpadear 2.5s infinite backwards steps(4);
+  }
+  .flicker3 {
+    animation: parpadear 1.5s infinite backwards steps(2);
+  }
+  
+  @keyframes parpadear {
+    to {
+      color: gray;
+      text-shadow: none;
+    }
+  }
+
+
