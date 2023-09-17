@@ -1,0 +1,285 @@
+body{
+    background-image: url("https://img.freepik.com/fotos-premium/holograma-telefono-cesta_99433-5100.jpg?w=740");
+    background-repeat: no-repeat;
+    background-color: #808080;
+    background-size: cover;
+  }
+  .button{
+    background-color: #808080;
+  }
+  .btn, btn-primary button{
+    color:#000;
+    text-shadow: 0 0 5px #1037b6, 0 0 15px #1037b6, 0 0 30px #1037b6;
+  }
+  .btn-gray {
+    background-color: #4444 !important;
+  }
+  .libro-gris {
+    color: #808080;
+  }
+  .precio-gris {
+    color: #808080;
+  }
+  .text-primary{
+    color:#808080;
+  }
+  .producto {
+    color: #808080 !important;
+  }
+  .precio{
+    color:#808080;
+    text-shadow: 0 0 5px #4444, 0 0 15px #4444, 0 0 30px #4444;
+  }
+  header, .alert{
+    z-index: 100;
+  }
+  .description{
+    height: 25px;
+    overflow: hidden;
+    transition: height .3s ease-in .3s;
+  }
+  .description:hover{
+    height: 80px;
+  }
+  .carrito{
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .table__productos{
+    display: flex;
+  }
+  .table__productos > img{
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+  }
+  .table__cantidad > input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  .hide, .remove{
+    display: none;
+  }
+  
+  /* --------------CARRUSEL--------------- */
+
+  .container {
+    border: 2px solid white;
+    box-shadow: inset 0 0 5px #0000ff, 0 0 10px #0000ff;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #444444;
+  }
+  
+  .container2 {
+    border: 2px solid white;
+    box-shadow: inset 0 0 5px #0000ff, 0 0 10px #0000ff;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 140px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #444444;
+  }
+
+  .neon3 {
+    font-family: monospace;
+    letter-spacing: 8px;
+    margin: 0;
+    font-size: 100px;
+    text-shadow: 0 0 5px #0000ff, 0 0 15px #0000ff, 0 0 30px #0000ff;
+  }
+
+
+
+  .carousel-control-prev-icon {
+    background-color: #00008B;
+    border: 40px #00008B;
+  }
+
+  .carousel-control-next-icon{
+    background-color: #00008B;
+    border: 20px #00008B;
+    outline: 12px #0000ff 
+  }
+  
+  .carousel-item img {
+    padding-top: 100px;
+    width: 300px;
+    height: auto; /* Esto mantiene la proporción de aspecto original de la imagen */
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+
+  .d-block, w-100{
+    width: 100%;
+  height: auto;
+  }
+
+
+  #carouselExample {
+    max-height: 713px; /* Ajusta aquí la altura máxima deseada */
+    padding: flex
+  }
+
+  .neon {
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 0 0 5px #00008B, 0 0 15px #00008B, 0 0 30px #00008B, 0 0 50px #00008B;
+  }
+  
+  .neon2 {
+    font-family: monospace;
+    letter-spacing: 8px;
+    margin: 0;
+    font-size: 100px;
+    text-shadow: 0 0 5px #87CEEB, 0 0 15px #87CEEB, 0 0 30px #87CEEB;
+  }
+  
+  .neon3 {
+    font-family: monospace;
+    letter-spacing: 20px;
+    margin: 0;
+    font-size: 20px;
+    text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+  }
+
+  .todosL {
+    font-family: monospace;
+    letter-spacing: 20px;
+    margin: 0;
+    font-size: 100%;
+    text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+    letter-spacing: 20px;
+  }
+
+  .divisionGeneral {
+    margin: auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 900px;
+    background-color: #444;
+  }
+
+
+  .card1 {
+    float: left;
+    width: 160px;
+    height: 500px;
+    background: #444;
+  }
+
+ 
+  .card2 {
+    float: left;
+    margin: 5px;
+    width: 160px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card3 {
+    float: left;
+    margin: 5px;
+    width: 160px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card4 {
+    float: left;
+    margin: 5px;
+    width: 300px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card5 {
+    float: left;
+    margin: 5px;
+    width: 160px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card6 {
+    float: left;
+    margin: 5px;
+    width: 50px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card7 {
+    float: left;
+    margin: 5px;
+    width: 50px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card8 {
+    float: left;
+    margin: 5px;
+    width: 50px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card9 {
+    float: left;
+    margin: 5px;
+    width: 50px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card10 {
+    float: left;
+    margin: 5px;
+    width: 50px;
+    height: 500px;
+    background: #444;
+  }
+
+  .card11 {
+    float: left;
+    margin: 5px;
+    width: 50px;
+    height: 500px;
+    background: #444;
+  }
+
+  .flicker1 {
+    animation: parpadear 2s infinite backwards steps(3);
+  }
+  .flicker2 {
+    animation: parpadear 2.5s infinite backwards steps(4);
+  }
+  .flicker3 {
+    animation: parpadear 1.5s infinite backwards steps(2);
+  }
+  
+  @keyframes parpadear {
+    to {
+      color: gray;
+      text-shadow: none;
+    }
+  }
