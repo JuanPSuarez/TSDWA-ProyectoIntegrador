@@ -94,99 +94,74 @@
         </div>
     </div>
 
-    <div class="title text-center">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card h-100 mb-3">
-            <div class="card-body text-center">
-              <div class="alert alert-info" role="alert">
-                <h2>INGRESAR O CREAR UNA CUENTA</h2>
-              </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card h-100 mb-3">
+                    <div class="card-body text-center">
+                        <div class="alert alert-info" role="alert">
+                            <h2>CREÁ TU CUENTA</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card h-100 mb-3">
-            <div class="card-body">
-              <div class="alert alert-primary" role="alert">
-                <h5>
-                  Nuevo Cliente
-                </h5>
-              </div>
-              <p>
-                Registrarse es simple y seguro. Te pediremos solo algunos datos
-                para hacer el seguimiento de los pedidos y poder procesar tus
-                compras más rápido. Además podrás recibir ofertas, promociones e
-                información de los últimos lanzamientos.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card h-100 mb-3">
-            <div class="card-body">
-              <div class="alert alert-primary" role="alert">
-                <h5>
-                  <i class="fa-solid fa-right-to-bracket"></i> Usuario
-                  Registrado
-                </h5>
-              </div>
-              <p>
-                Gracias por volver a visitarnos, te pedimos que ingreses tu
-                usuario y contraseña para ingresar a tu cuenta.
-              </p>
-              <form>
-                <div class="mb-3">
-                  <label for="idE" class="form-label">Dirección de email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="idE"
-                    aria-describedby="idEH"
-                  />
-                  <div id="idEH" class="form-text">
-                    Debe ser un correo válido. <span style="color: red">*</span>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card h-100 mb-3">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <form>
+                                <p style="color: rgb(19, 19, 103)">
+                                    <strong>Información Personal</strong>
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="formNameInput" class="form-label">Nombre<span style="color: red">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="formNameInput"
+                        placeholder="Ingrese su nombre"
+                      />
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="formSurnameInput" class="form-label"
+                          >Apellido<span style="color: red">*</span></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="formSurnameInput"
+                          placeholder="Ingrese su apellido"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="idE" class="form-label"
+                        >Dirección de email<span style="color: red"
+                          >*</span
+                        ></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="idE"
+                        aria-describedby="idEH"
+                        placeholder="Ingrese su correo electrónico"
+                      />
+                      <div id="idEH" class="form-text">
+                        Debe ser un correo válido.
+                        <span style="color: red">*</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="mb-3">
-                  <label for="InputPassword" class="form-label"
-                    >Contraseña</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="InputPassword"
-                  />
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="Check" />
-                  <label class="form-check-label" for="Check">Recordarme</label>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card h-100 mb-3">
-            <div class="card-body text-center">
-              <a href="create.html" class="btn btn-primary">CREAR CUENTA</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card h-100 mb-3">
-            <div class="card-body text-center">
-              <input type="submit" value="ACCEDER" class="btn btn-primary" />
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -196,32 +171,62 @@
       <div class="row">
         <div class="col-md-6">
           <div class="card h-100 mb-3">
-            <div class="card-body text-center"></div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card h-100 mb-3">
-            <div class="card-body text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <form>
+                  <p style="color: rgb(19, 19, 103)">
+                    <strong>Información de inicio de sesión</strong>
+                  </p>
+                  <div class="row">
+                    <div class="col">
+                      <label for="InputPassword" class="form-label"
+                        >Contraseña<span style="color: red">*</span></label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="InputPassword"
+                      />
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="InputConfirmPassword" class="form-label"
+                          >Confirme contraseña<span style="color: red"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="InputConfirmPassword"
+                        />
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="Check"
+                        />
+                        <label class="form-check-label" for="Check"
+                          >Suscribirse al boletín de novedades</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <input type="submit" value="ENVIAR" class="btn btn-primary" />
+              </div>
+            </div>
+            <div>
               <p>
-                <strong
-                  ><a
-                    href="../account/forgotpassword.html"
-                    style="color: rgb(19, 19, 103)"
-                    >¿Olvidó su contraseña?</a
-                  ></strong
-                >
-              </p>
-              <p>
-                <strong
-                  ><a href="../../index.html" style="color: rgb(19, 19, 103)"
-                    >Volver atrás</a
-                  ></strong
-                >
+                <b><span style="color: red">* Campos Obligatorios</span></b>
               </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <p>
+      <a href="../../index.html" style="color: blue">Volver atrás</a>
+    </p>
     </div>
 
     <footer class="bg-dark text-light text-center py-3">
