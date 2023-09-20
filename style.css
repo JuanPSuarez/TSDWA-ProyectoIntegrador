@@ -27,6 +27,8 @@ h1 {
   text-transform: uppercase;
 }
 
+/*contenedor card*/
+
 .contenedor {
   width: 90%;
   max-width: 1200px;
@@ -53,6 +55,7 @@ h1 {
   border-radius: 10px 10px 0 0;
 }
 
+
 .card-body {
   border-radius: 0 0 10px 10px;
   background-color: #ccc;
@@ -63,13 +66,15 @@ h1 {
 
 .btn {
   display: block;
-  background-color: var(--secondary);
+  background-color: var(--light);
   padding: 5px;
   text-decoration: none;
   color: #fff;
   text-align: center;
   margin-top: 10px;
 }
+
+/*regla css predefine disposicion de card*/
 
 @media(min-width: 480px) {
   .contenedor {
@@ -90,13 +95,11 @@ h1 {
   }
 }
 
-body {
-  background-image: url("https://media.istockphoto.com/id/184652566/es/foto/lona-fondo-gris.jpg?s=1024x1024&w=is&k=20&c=JoIBOD3GF7ETTSIrTrWXeIF6zdp18YE32d3m25CxtKw=");
-}
+/*contenedor general*/
 
 .container {
   border: 2px solid white;
-  box-shadow: inset 0 0 5px #0000ff, 0 0 10px #0000ff;
+  box-shadow: inset 0 0 5px hsl(240, 75%, 98%), 0 0 10px #f6f6fa;
   border-radius: 60px;
   max-width: 800px;
   margin: auto;
@@ -104,14 +107,19 @@ body {
   padding: 20px;
   text-align: center;
   color: white;
-  background-color: #444444;
+  background-color: #f0cc00;
 }
 
+/*contenedor carrucel*/
 
+.container-fluid {
+  padding-top: 250px;
+  border-radius: 50%;
+}
 
 .container2 {
   border: 2px solid white;
-  box-shadow: inset 0 0 5px #0000ff, 0 0 10px #0000ff;
+  box-shadow: inset 0 0 5px #fefeff, 0 0 10px #ffffff;
   border-radius: 60px;
   max-width: 800px;
   margin: auto;
@@ -119,27 +127,40 @@ body {
   padding: 20px;
   text-align: center;
   color: white;
-  background-color: #444444;
+  background-color: #fbff08;
 }
 
-
-
-
-.carousel-control-prev-icon {
-  background-color: #00008B;
-  border: 40px #00008B;
-}
-
-.carousel-control-next-icon {
-  background-color: #00008B;
-  border: 20px #00008B;
-  outline: 12px #0000ff
-}
+/*carausel*/
 
 .carousel-inner {
   border: 20px #00008B;
-  outline: 12px #0000ff
+  outline: 12px #0000ff;
 }
+
+/*image carousel*/
+
+.carousel-item,
+active {
+  padding: 30px;
+  margin-top: 10px;
+
+}
+
+.carousel-inner {
+  padding: 20px;
+  top: -10px;
+}
+
+
+/*icon control-prev*/
+
+.carousel-control-prev-icon {
+  float: right;
+  text-align: right;
+
+
+}
+
 
 .neon {
   font-family: "Dancing Script", cursive;
@@ -179,12 +200,12 @@ body {
   letter-spacing: 20px;
   margin: 0;
   font-size: 100%;
-  text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+  text-shadow: 0 0 5px #000000, 0 0 15px #000000, 0 0 30px #000000;
   letter-spacing: 20px;
 }
 
 .conContainer {
-  background-image: url("https://previews.123rf.com/images/yershovoleksandr/yershovoleksandr1608/yershovoleksandr160800022/60611650-diferentes-categor%C3%ADas-de-libros-y-temas-g%C3%A9neros-de-la-literatura-la-ciencia-y-la-fantas%C3%ADa-drama-y.jpg");
+
   padding: 250px;
 }
 
