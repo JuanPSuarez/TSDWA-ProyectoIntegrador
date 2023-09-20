@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>PRODUCTOS LIBROTEKA</title>
+</head>
+<body>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion">Libro 1</p>
+                    <span class="precio">$ 1.300</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion" id>Libro 2</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion">Libro 3</p>
+                    <span class="precio">$ 3.600</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion">Libro 4</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion">Libro 5</p>
+                    <span class="precio">$ 130</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion">Libro 6</p>
+                    <span class="precio">$ 2.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion">Libro 7</p>
+                    <span class="precio">$ 2.500</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/LIBRO 1.png" alt="">
+                    </div>
+                    <p class="descripcion">Libro 8</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="img/1.png" alt="" id="img">
+                <h2 id="modelo">MODEL</h2>
+                <p id="descripcion">Descripción VARIEDAD Libro 1</p>
+
+                <span class="precio" id="precio">$ 1300</span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="">SIZE</label>
+                        <select name="" id="">
+                            <option value="">ROMANCE</option>
+                            <option value="">FICCION</option>
+                            <option value="">AVENTURA</option>
+                            <option value="">POESIA</option>
+                        </select>
+                    </div>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
