@@ -152,11 +152,12 @@ active {
 }
 
 
-/*icon control-prev*/
+/* boton control control-prev izq*/
 
 .carousel-control-prev-icon {
   float: right;
   text-align: right;
+  color: #000000;
 
 
 }
