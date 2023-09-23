@@ -100,14 +100,15 @@ h1 {
 .container {
   border: 2px solid white;
   box-shadow: inset 0 0 5px hsl(240, 75%, 98%), 0 0 10px #f6f6fa;
-  border-radius: 60px;
+  border-radius: 90px;
   max-width: 800px;
   margin: auto;
   margin-top: 50px;
   padding: 20px;
   text-align: center;
-  color: white;
-  background-color: #f0cc00;
+  color: #000000;
+  background-color: #87CEEB;
+
 }
 
 /*contenedor carrucel*/
@@ -157,10 +158,12 @@ active {
 .carousel-control-prev-icon {
   float: right;
   text-align: right;
-  color: #000000;
-
 
 }
+
+/*boton next derecho*/
+
+
 
 
 .neon {
