@@ -4,7 +4,7 @@
 
 <h2>Hola! 👋</h2>
 
-Somos Angel Villarreal, Sasinka Raúl, Jorgelina Sapp,  Daniel Alejandro Segall, Juan Pablo Suarez, Leandro Santiago, Luciana Pucheta, Axel Cardozo,  Celeste Trujillo realizando nuestro proyecto para TPO Desarrollo Web.
+Somos Angel Villarreal, Sasinka Raúl, Jorgelina Sapp,  Daniel Alejandro Segall, Juan Pablo Suarez, Leandro Santiago, Luciana Pucheta, Axel Cardozo,  Celeste Trujillo, Mónica Valeria Zapata, realizando nuestro proyecto para TPO Desarrollo Web.
 
 🎓 Curso:   
 📚 Módulo:  Front End
@@ -36,3 +36,4 @@ Somos Angel Villarreal, Sasinka Raúl, Jorgelina Sapp,  Daniel Alejandro Segall,
 - 👦 [@leandros1793](https://github.com/leandros1793)
 - 👩 [@Luchipucheta](https://github.com/Luchipucheta)
 - 👦 [@ExpertHacker444](https://github.com/ExpertHacker444)
+- 👩 [@monicavzapata](https://github.com/MonicaVZapata)
