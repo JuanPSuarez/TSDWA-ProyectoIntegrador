@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -7,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Libroteka</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 </head>
 
@@ -17,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="index.html">
-                <img src="../../assets/Book_25711.png" alt="icono del sitio a modificar">
+                <img src="../assets/Book_25711.png" alt="icono del sitio a modificar">
                 <span class="text-uppercase fw-lighter ms-2">Libroteka</span>
             </a>
             <div class="order-lg-2 nav-btns">
@@ -41,19 +39,19 @@
             <div class="collapse navbar-collapse order-lg-1" id="navMenu">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#inicio">inicio</a>
+                        <a class="nav-link text-uppercase text-dark" href="../index.html">inicio</a>
                     </li>
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#categorias">categorias</a>
+                        <a class="nav-link text-uppercase text-dark" href="categorias.html">categorias</a>
                     </li>
                     <li class="nav-item px-2 py-2">
                         <a class="nav-link text-uppercase text-dark" href="#mas vendidos">mas vendidos</a>
                     </li>
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="./pages/sobreNosotros.html">Sobre Nosotros</a>
+                        <a class="nav-link text-uppercase text-dark" href="sobreNosotros.html">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#about">contacto</a>
+                        <a class="nav-link text-uppercase text-dark" href="contacto.html">contacto</a>
                     </li>
 
                 </ul>
@@ -75,13 +73,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../../assets/carruseln1.jpg" class="d-block w-100" alt="...">
+                        <img src="../assets/carruseln1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../../assets/carruseln2.jpg" class="  d-block w-100" alt="...">
+                        <img src="../assets/carruseln2.jpg" class="  d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../../assets/carruseln3.jpg" class="d-block w-100" alt="...">
+                        <img src="../assets/carruseln3.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -173,7 +171,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="card h-100 mb-3">
+          <div class="card h-90 mb-3">
             <div class="card-body">
               <div class="mb-3">
                 <form>
@@ -192,17 +190,16 @@
                       />
                     </div>
                     <div class="col">
-                      <div class="mb-3">
-                        <label for="InputConfirmPassword" class="form-label"
-                          >Confirme contraseña<span style="color: red"
-                            >*</span
-                          ></label
-                        >
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="InputConfirmPassword"
-                        />
+                      <label for="InputConfirmPassword" class="form-label"
+                        >Confirme contraseña<span style="color: red">*</span
+                        ></label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="InputConfirmPassword"
+                      />
+                      <div class="form-check">
                         <input
                           type="checkbox"
                           class="form-check-input"
@@ -215,23 +212,24 @@
                     </div>
                   </div>
                 </form>
-                <input type="submit" value="ENVIAR" class="btn btn-primary" />
               </div>
             </div>
-            <div>
+            <div class="text-center">
+              <input type="submit" value="ENVIAR" class="btn btn-primary" />
+            </div>
+            <div class="card body text-center">
               <p>
                 <b><span style="color: red">* Campos Obligatorios</span></b>
+              </p>
+              <p>
+                <b><a href="login.html" style="color: rgb(19, 19, 103)"> Volver atrás </a></b>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <p>
-      <a href="../../index.html" style="color: blue">Volver atrás</a>
-    </p>
-    </div>
-
+    
     <footer class="bg-dark text-light text-center py-3">
       <div class="container">
         <div class="row">
@@ -261,7 +259,7 @@
           <div class="col text-center-md-4">
             <h3>MI CUENTA</h3>
             <ul>
-              <li><a href="../../costumer/account/login.html">Ingresar</a></li>
+              <li><a href="login.html">Ingresar</a></li>
                 <li><a href="#">Ver Carrito</a></li>
                 <li><a href="#">Favoritos</a></li>
                 <li><a href="#">Finalizar Compra</a></li>
