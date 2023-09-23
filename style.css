@@ -1,0 +1,240 @@
+:root {
+    --light: #E2E2E2;
+    --primary: rgb(9, 9, 71);
+    --secondary: rgb(70, 70, 55);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--secondary);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/*contenedor card*/
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-header {
+    height: 200px;
+    width: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+
+.card-title {
+    text-align: center;
+    margin: 0;
+}
+
+.card-description {
+    flex-grow: 1;
+}
+
+.card-header img {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    border-radius: 0 0 10px 10px;
+    background-color: #ccc;
+    padding: 20px 15px;
+    text-align: justify;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    display: block;
+    background-color: var(--light);
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/*regla css predefine disposicion de card*/
+
+@media(min-width: 480px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/*contenedor general*/
+
+
+/* .container {
+    border: 2px solid white;
+    box-shadow: inset 0 0 5px hsl(240, 75%, 98%), 0 0 10px #f6f6fa;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #f0cc00;
+} */
+
+
+/*contenedor carrucel*/
+
+.container-fluid {
+    padding-top: 250px;
+    border-radius: 50%;
+}
+
+.container2 {
+    border: 2px solid white;
+    box-shadow: inset 0 0 5px #fefeff, 0 0 10px #ffffff;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 140px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #fbff08;
+}
+
+
+/*carausel*/
+
+.carousel-inner {
+    border: 20px #00008B;
+    outline: 12px #0000ff;
+}
+
+
+/*image carousel*/
+
+.carousel-item,
+active {
+    padding: 30px;
+    margin-top: 10px;
+}
+
+.carousel-inner {
+    padding: 20px;
+    top: -10px;
+}
+
+
+/* boton control control-prev izq*/
+
+.carousel-control-prev-icon {
+    float: right;
+    text-align: right;
+    color: #000000;
+}
+
+.neon {
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 0 0 5px #00008B, 0 0 15px #00008B, 0 0 30px #00008B, 0 0 50px #00008B;
+}
+
+.neon2 {
+    font-family: monospace;
+    letter-spacing: 8px;
+    margin: 0;
+    font-size: 70px;
+    text-shadow: 0 0 5px #87CEEB, 0 0 15px #87CEEB, 0 0 30px #87CEEB;
+    color: black
+}
+
+.neon2-1 {
+    font-family: monospace;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 100px;
+    text-shadow: 0 0 5px #87CEEB, 0 0 15px #87CEEB, 0 0 30px #87CEEB;
+    color: black
+}
+
+.neon3 {
+    font-family: monospace;
+    letter-spacing: 20px;
+    margin: 0;
+    font-size: 20px;
+    text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+}
+
+.todosL {
+    font-family: monospace;
+    letter-spacing: 20px;
+    margin: 0;
+    font-size: 100%;
+    text-shadow: 0 0 5px #000000, 0 0 15px #000000, 0 0 30px #000000;
+    letter-spacing: 20px;
+}
+
+.conContainer {
+    padding: 250px;
+}
+
+.divisionGeneral {
+    margin: auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 900px;
+    background-color: #444;
+}
+
+.flicker1 {
+    animation: parpadear 2s infinite backwards steps(3);
+}
+
+.flicker2 {
+    animation: parpadear 2.5s infinite backwards steps(4);
+}
+
+.flicker3 {
+    animation: parpadear 1.5s infinite backwards steps(2);
+}
+
+@keyframes parpadear {
+    to {
+        color: gray;
+        text-shadow: none;
+    }
+}
