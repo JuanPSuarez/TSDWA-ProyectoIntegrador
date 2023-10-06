@@ -8,14 +8,60 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
+<body style="background-color: #e7e0d8;">
+
+    <!-- NAVBAR  -->
+    <nav class="navbar navbar-expand-lg navbar-light  py-1 fixed-top" style="background-color: #d9d1bd;">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="../index.html">
+                <img src="../../assets/Book_25711.png" alt="icono del sitio a modificar">
+                <span class="text-uppercase fw-lighter ms-2">Libroteka</span>
+            </a>
+            <div class="order-lg-2 nav-btns">
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="../index.html">inicio</a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="./categorias.html">categorias</a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="#mas vendidos">mas vendidos</a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="./sobreNosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="./contacto.html">contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container fluid mb-5 mt-5">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <img src="../../assets/book-cover.jpg" alt="Portada del Libro" class="img-fluid max-width-50 max-height-50">
             </div>
-            <div class="col-md-6 book-details">
-                <h1>TITULO</h1>
+            <div class="col-md-6 mt-5 book-details">
+                <h1 class="mb-4">TITULO</h1>
                 <p>Autor: APELLIDO, NOMBRE</p>
                 <p>Disponibilidad: En existencia / Sin Stock</p>
                 <hr>
@@ -30,7 +76,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
