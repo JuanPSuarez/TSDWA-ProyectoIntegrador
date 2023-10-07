@@ -93,7 +93,6 @@
             </div>
         </div>
     </div>
-
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -119,45 +118,65 @@
                   </p>
                   <div class="row">
                     <div class="col">
-                      <label for="formNameInput" class="form-label"
-                        >Nombre<span style="color: red">*</span></label
-                      >
+                      <label for="nombreInput" class="form-label"
+                        >Nombre<span style="color: red">*</span></label>
                       <input
                         type="text"
                         class="form-control"
-                        id="formNameInput"
+                        id="nombreInput"
+                        minlength="2"
+                        maxlength="30"
+                        required
                         placeholder="Ingrese su nombre"
                       />
+                      <div class="form-text">  
+                        <span id="mensajeErrorNombre" style="color: red"></span>
+                      </div>
                     </div>
                     <div class="col">
                       <div class="mb-3">
-                        <label for="formSurnameInput" class="form-label"
-                          >Apellido<span style="color: red">*</span></label
-                        >
+                        <label for="apellidoInput" class="form-label"
+                          >Apellido<span style="color: red">*</span></label>
                         <input
                           type="text"
                           class="form-control"
-                          id="formSurnameInput"
+                          id="apellidoInput"
+                          minlength="2"
+                          maxlength="35"
+                          required
                           placeholder="Ingrese su apellido"
                         />
+                        <div class="form-text">  
+                          <span id="mensajeErrorApellido" style="color: red"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="dni" class="form-label"
+                        >Número de DNI<span style="color: red">*</span></label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="dni"
+                        placeholder="Ingrese su número de DNI"
+                        required
+                        oninput="validarDNI(this.value)"  
+                      />
+                      <div class="form-text">
+                        <span id="mensajeErrorDni" style="color: red"></span>
                       </div>
                     </div>
                     <div class="mb-3">
                       <label for="idE" class="form-label"
-                        >Dirección de email<span style="color: red"
-                          >*</span
-                        ></label
-                      >
+                        >Dirección de email<span style="color: red">*</span></label>
                       <input
                         type="email"
                         class="form-control"
                         id="idE"
-                        aria-describedby="idEH"
                         placeholder="Ingrese su correo electrónico"
                       />
-                      <div id="idEH" class="form-text">
-                        Debe ser un correo válido.
-                        <span style="color: red">*</span>
+                      <div class="form-text">
+                        <span id="mensajeErrorCorreo" style="color: red"></span>
                       </div>
                     </div>
                   </div>
@@ -181,19 +200,19 @@
                   <div class="row">
                     <div class="col">
                       <label for="InputPassword" class="form-label"
-                        >Contraseña<span style="color: red">*</span></label
-                      >
+                        >Contraseña<span style="color: red">*</span></label>
                       <input
                         type="password"
                         class="form-control"
                         id="InputPassword"
                       />
+                      <div class="form-text">  
+                        <span id="mensajeErrorPassword" style="color: red"></span>
+                      </div>
                     </div>
                     <div class="col">
                       <label for="InputConfirmPassword" class="form-label"
-                        >Confirme contraseña<span style="color: red">*</span
-                        ></label
-                      >
+                        >Confirme contraseña<span style="color: red">*</span></label>
                       <input
                         type="password"
                         class="form-control"
@@ -206,8 +225,7 @@
                           id="Check"
                         />
                         <label class="form-check-label" for="Check"
-                          >Suscribirse al boletín de novedades</label
-                        >
+                          >Suscribirse al boletín de novedades</label>
                       </div>
                     </div>
                   </div>
@@ -279,5 +297,82 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+<!-- validacion Nombre -->
+<script>
+  document.getElementById('nombreInput').addEventListener('blur', function() {
+      var nombreValidar = this.value;
+      var nombreRegex = /^[a-zA-Z\-']+$/;
+      if (!nombreRegex.test(nombreValidar)) {
+          document.getElementById('mensajeErrorNombre').textContent = 'Debe contener caracteres alfabéticos';
+      } else {
+          document.getElementById('mensajeErrorNombre').textContent = '';
+      }
+  });
+</script>
+<!-- validacion Apellido -->
+<script>
+  document.getElementById('apellidoInput').addEventListener('blur', function() {
+      var apellidoValidar = this.value;
+      var apellidoRegex = /^[a-zA-Z\-']+$/;
+      if (!apellidoRegex.test(apellidoValidar)) {
+          document.getElementById('mensajeErrorApellido').textContent = 'Debe contener caracteres alfabéticos';
+      } else {
+          document.getElementById('mensajeErrorApellido').textContent = '';
+      }
+  });
+ </script>
+<!-- validacion DNI -->
+<script>
+  document.getElementById('dni').addEventListener('blur', function() {
+      var dniValidar = this.value;
+      const dniRegex = /^[0-9]{8}$/;
+      if (!dniRegex.test(dniValidar)) {
+          document.getElementById('mensajeErrorDni').textContent = 'Debe contener 8 dígitos';
+      } else {
+          document.getElementById('mensajeErrorDni').textContent = '';
+      }
+  });
+ </script>
+<!-- validacion correo -->
+  <script>
+    document.getElementById('idE').addEventListener('blur', function() {
+        var emailInput = this.value;
+        var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (!emailRegex.test(emailInput)) {
+            document.getElementById('mensajeErrorCorreo').textContent = 'Debe ser un formato de correo válido';
+        } else {
+            document.getElementById('mensajeErrorCorreo').textContent = '';
+        }
+    });
+  </script>
+<!-- validacion contraseña -->
+  <script>
+    document.getElementById('InputPassword').addEventListener('blur', function() {
+        var passwordValidar = this.value;
+        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (!passwordRegex.test(passwordValidar)) {
+            document.getElementById('mensajeErrorPassword').textContent = 'Debe contener al menos una minúscula, una mayúscula, un caracter especial y entre 2 y 8 caracteres.';
+        } else {
+            document.getElementById('mensajeErrorPassword').textContent = '';
+        }
+    });
+  </script>
+  <!-- verificacion repeticion de contraseña  -->
+  <script>
+    var passwordInput = document.getElementById("InputPassword");
+    var confirmPasswordInput = document.getElementById("InputConfirmPassword");
+    var mensajeErrorPassword = document.getElementById("mensajeErrorPassword");
+  
+    confirmPasswordInput.addEventListener("input", function() {
+      var password = passwordInput.value;
+      var confirmPassword = confirmPasswordInput.value;
+
+      if (password === confirmPassword) {
+        mensajeErrorPassword.textContent = "";
+      } else {
+        mensajeErrorPassword.textContent = "Las contraseñas no coinciden";
+      }
+    });
+  </script>
 </body>
 </html>
