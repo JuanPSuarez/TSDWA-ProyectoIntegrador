@@ -7,6 +7,23 @@ from models.genre import Genre
 from models.relationship import Relationship
 
 
+import mysql.connector
+
+# Configura la conexión a la base de datos
+db_connection = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="Libroteka"
+)
+
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     customer1 = User("123", "password123", "active", "2023-09-18")
