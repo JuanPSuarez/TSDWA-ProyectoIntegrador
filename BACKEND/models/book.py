@@ -1,20 +1,6 @@
-import mysql.connector
-from config import host, database, user, password
-
-def get_db_connection():
-    try:
-        conn = mysql.connector.connect(
-            host=host,
-            user=user,
-            password=password,
-            database=database
-        )
-        return conn
-    except Exception as e:
-        print(f"Error al conectar a la base de datos: {str(e)}")
-        return None
-
 class Book:
+    books = []  
+
     def __init__(self, title, author, genre, description, publicationDate, price, stock):
         self.title = title
         self.author = author
@@ -26,85 +12,78 @@ class Book:
 
     @staticmethod
     def create_book(title, author, genre, description, publicationDate, price, stock):
-        conn = get_db_connection()
-        if conn is None:
-            return "Error al conectar a la base de datos."
-
-        cursor = conn.cursor()
-
-        try:
-            insert_query = "INSERT INTO books (title, author, genre, description, publicationDate, price, stock) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-            cursor.execute(insert_query, (title, author, genre, description, publicationDate, price, stock))
-            conn.commit()
-            return "Libro creado exitosamente."
-
-        except Exception as e:
-            conn.rollback()
-            return f"Error al crear el libro: {str(e)}"
-
-        finally:
-            cursor.close()
-            conn.close()
+        new_book = Book(title, author, genre, description, publicationDate, price, stock)
+        Book.books.append(new_book)
+        return "Libro creado exitosamente."
 
     @staticmethod
     def read_books():
-        conn = get_db_connection()
-        if conn is None:
-            return "Error al conectar a la base de datos."
-
-        cursor = conn.cursor()
-
-        try:
-            select_query = "SELECT * FROM books"
-            cursor.execute(select_query)
-            books = cursor.fetchall()
-            return books
-
-        except Exception as e:
-            return f"Error al leer los libros: {str(e)}"
-
-        finally:
-            cursor.close()
-            conn.close()
+        return Book.books
 
     @staticmethod
     def update_book(book_id, title, author, genre, description, publicationDate, price, stock):
-        try:
-            conn = get_db_connection()
-            cursor = conn.cursor()
-
-            query = "UPDATE books SET title=%s, author=%s, genre=%s, description=%s, publicationDate=%s, price=%s, stock=%s WHERE id=%s"
-            values = (title, author, genre, description, publicationDate, price, stock, book_id)
-
-            cursor.execute(query, values)
-            conn.commit()
-
+        if 0 <= book_id < len(Book.books):
+            updated_book = Book(title, author, genre, description, publicationDate, price, stock)
+            Book.books[book_id] = updated_book
             return "Libro actualizado exitosamente."
-
-        except Exception as e:
-            return f"Error al actualizar el libro: {str(e)}"
-
-        finally:
-            cursor.close()
-            conn.close()
+        else:
+            return "ID de libro no válido."
 
     @staticmethod
     def delete_book(book_id):
-        try:
-            conn = get_db_connection()
-            cursor = conn.cursor()
-
-            query = "DELETE FROM books WHERE id=%s"
-            values = (book_id,)
-
-            cursor.execute(query, values)
-            conn.commit()
-
+        if 0 <= book_id < len(Book.books):
+            del Book.books[book_id]
             return "Libro eliminado exitosamente."
+        else:
+            return "ID de libro no válido."
 
-        except Exception as e:
-            return f"Error al eliminar el libro: {str(e)}"
 
-        finally:
-            cursor.close()
-            conn.close()
+if __name__ == "__main__":
+    while True:
+        print("\nOpciones:")
+        print("1. Crear libro")
+        print("2. Leer libros")
+        print("3. Actualizar libro")
+        print("4. Eliminar libro")
+        print("5. Salir")
+        choice = input("Selecciona una opción: ")
+
+        if choice == "1":
+            title = input("Título: ")
+            author = input("Autor: ")
+            genre = input("Género: ")
+            description = input("Descripción: ")
+            publicationDate = input("Fecha de publicación: ")
+            price = input("Precio: ")
+            stock = input("Stock: ")
+            result = Book.create_book(title, author, genre, description, publicationDate, price, stock)
+            print(result)
+
+        elif choice == "2":
+            books = Book.read_books()
+            for i, book in enumerate(books):
+                print(f"ID: {i}, Título: {book.title}")
+
+        elif choice == "3":
+            book_id = int(input("ID del libro a actualizar: "))
+            if 0 <= book_id < len(Book.books):
+                title = input("Nuevo título: ")
+                author = input("Nuevo autor: ")
+                genre = input("Nuevo género: ")
+                description = input("Nueva descripción: ")
+                publicationDate = input("Nueva fecha de publicación: ")
+                price = input("Nuevo precio: ")
+                stock = input("Nuevo stock: ")
+                result = Book.update_book(book_id, title, author, genre, description, publicationDate, price, stock)
+                print(result)
+            else:
+                print("ID de libro no válido.")
+
+        elif choice == "4":
+            book_id = int(input("ID del libro a eliminar: "))
+            result = Book.delete_book(book_id)
+            print(result)
+
+        elif choice == "5":
+            break
+
