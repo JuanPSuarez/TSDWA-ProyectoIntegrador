@@ -39,4 +39,21 @@ if __name__ == "__main__":
         print("5. Salir")
         choice = input("Selecciona una opción: ")
 
+
+        if choice == "1":
+            title = input("Título: ")
+            author = input("Autor: ")
+            disponibilidad = input("Disponibilidad: ")
+            price = input("Precio: ")
+            sinopsis = input("Sinopsis: ")
+            editorial = input("Editorial: ")
+            ISBN = input("ISBN: ")
+            num_paginas = input("Número de páginas: ")
+            idioma = input("Idioma: ")
+            formato = input("Formato: ")
+            clasificacion = input("Clasificación: ")
+            publicationDate = input("Fecha de publicación: ")
+
+            result = BookCRUD.create_book(title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate)
+            print(result)
         
