@@ -19,3 +19,13 @@ class BookCRUD:
             return "Libro actualizado exitosamente."
         else:
             return "ID de libro no válido."
+   
+    @staticmethod
+    def delete_book(book_id):
+        if 0 <= book_id < len(Book.books):
+            del Book.books[book_id]
+            return "Libro eliminado exitosamente."
+        else:
+            return "ID de libro no válido."
+        
+        
