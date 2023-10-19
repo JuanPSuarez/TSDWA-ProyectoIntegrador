@@ -29,3 +29,14 @@ class BookCRUD:
             return "ID de libro no válido."
         
         
+if __name__ == "__main__":
+    while True:
+        print("\nOpciones:")
+        print("1. Crear libro")
+        print("2. Leer libros")
+        print("3. Actualizar libro")
+        print("4. Eliminar libro")
+        print("5. Salir")
+        choice = input("Selecciona una opción: ")
+
+        
