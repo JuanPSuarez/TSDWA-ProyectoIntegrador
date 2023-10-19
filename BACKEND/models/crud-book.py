@@ -56,4 +56,11 @@ if __name__ == "__main__":
 
             result = BookCRUD.create_book(title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate)
             print(result)
+            
+            
+        elif choice == "2":
+            books = BookCRUD.read_books()
+            for i, book in enumerate(books):
+                print(f"ID: {i}, Título: {book.title}")
+
         
