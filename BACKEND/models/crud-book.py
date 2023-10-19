@@ -83,3 +83,8 @@ if __name__ == "__main__":
                 print(result)
             else:
                 print("ID de libro no válido.")
+           
+        elif choice == "4":
+            book_id = int(input("ID del libro a eliminar: "))
+            result = BookCRUD.delete_book(book_id)
+            print(result)
