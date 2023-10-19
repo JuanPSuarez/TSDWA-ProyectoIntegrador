@@ -88,3 +88,6 @@ if __name__ == "__main__":
             book_id = int(input("ID del libro a eliminar: "))
             result = BookCRUD.delete_book(book_id)
             print(result)
+            
+        elif choice == "5":
+            break    
