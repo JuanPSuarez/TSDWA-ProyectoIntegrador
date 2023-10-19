@@ -63,4 +63,23 @@ if __name__ == "__main__":
             for i, book in enumerate(books):
                 print(f"ID: {i}, Título: {book.title}")
 
-        
+        elif choice == "3":
+            book_id = int(input("ID del libro a actualizar: "))
+            if 0 <= book_id < len(books):
+                title = input("Nuevo título: ")
+                author = input("Nuevo autor: ")
+                disponibilidad = input("Nueva disponibilidad: ")
+                price = input("Nuevo precio: ")
+                sinopsis = input("Nueva sinopsis: ")
+                editorial = input("Nueva editorial: ")
+                ISBN = input("Nuevo ISBN: ")
+                num_paginas = input("Nuevo número de páginas: ")
+                idioma = input("Nuevo idioma: ")
+                formato = input("Nuevo formato: ")
+                clasificacion = input("Nueva clasificación: ")
+                publicationDate = input("Nueva fecha de publicación: ")
+
+                result = BookCRUD.update_book(book_id, title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate)
+                print(result)
+            else:
+                print("ID de libro no válido.")
