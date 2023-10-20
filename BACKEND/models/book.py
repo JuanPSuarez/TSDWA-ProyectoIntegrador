@@ -1,5 +1,7 @@
 class Book:
-    def __init__(self, title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate):
+     books = [] 
+     
+     def __init__(self, title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate):
         self.title = title
         self.author = author
         self.disponibilidad = disponibilidad
