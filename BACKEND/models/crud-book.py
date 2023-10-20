@@ -1,4 +1,4 @@
-from models.book import Book
+from book import Book
 
 class BookCRUD:
     @staticmethod
