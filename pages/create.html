@@ -1,101 +1,173 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Libroteka</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
     />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="index.html">
-                <img src="../../assets/Book_25711.png" alt="icono del sitio a modificar">
-                <span class="text-uppercase fw-lighter ms-2">Libroteka</span>
-            </a>
-            <div class="order-lg-2 nav-btns">
-                <button type="button" class="btn position-relative">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
-                </button>
-                <button type="button" class="btn position-relative">
-                    <i class="fa fa-heart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
-                </button>
-                <button type="button" class="btn position-relative">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse order-lg-1" id="navMenu">
-                <ul class="navbar-nav mx-auto text-center">
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#inicio">inicio</a>
-                    </li>
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#categorias">categorias</a>
-                    </li>
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#mas vendidos">mas vendidos</a>
-                    </li>
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="./pages/sobreNosotros.html">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#about">contacto</a>
-                    </li>
-
-                </ul>
-            </div>
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+          href="index.html"
+        >
+          <img
+            src="../assets/Book_25711.png"
+            alt="icono del sitio a modificar"
+          />
+          <span class="text-uppercase fw-lighter ms-2">Libroteka</span>
+        </a>
+        <div class="order-lg-2 nav-btns">
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-shopping-cart"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >5</span
+            >
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-heart"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >2</span
+            >
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
 
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="../index.html"
+                >inicio</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="categorias.html"
+                >categorias</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="masvendidos.html"
+                >mas vendidos</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="sobreNosotros.html"
+                >Sobre Nosotros</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="contacto.html"
+                >contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-
     <div class="container-fluid">
-
-        <div id="carouselExampleAutoplaying" class="carousel slide">
-            <div class="container">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../../assets/carruseln1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../../assets/carruseln2.jpg" class="  d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../../assets/carruseln3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+      <div id="carouselExampleAutoplaying" class="carousel slide">
+        <div class="container">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../assets/carruseln1.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
+            <div class="carousel-item">
+              <img
+                src="../assets/carruseln2.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../assets/carruseln3.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+      </div>
     </div>
-
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -121,27 +193,58 @@
                   </p>
                   <div class="row">
                     <div class="col">
-                      <label for="formNameInput" class="form-label"
+                      <label for="nombreInput" class="form-label"
                         >Nombre<span style="color: red">*</span></label
                       >
                       <input
                         type="text"
                         class="form-control"
-                        id="formNameInput"
+                        id="nombreInput"
+                        minlength="2"
+                        maxlength="30"
+                        required
                         placeholder="Ingrese su nombre"
                       />
+                      <div class="form-text">
+                        <span id="mensajeErrorNombre" style="color: red"></span>
+                      </div>
                     </div>
                     <div class="col">
                       <div class="mb-3">
-                        <label for="formSurnameInput" class="form-label"
+                        <label for="apellidoInput" class="form-label"
                           >Apellido<span style="color: red">*</span></label
                         >
                         <input
                           type="text"
                           class="form-control"
-                          id="formSurnameInput"
+                          id="apellidoInput"
+                          minlength="2"
+                          maxlength="35"
+                          required
                           placeholder="Ingrese su apellido"
                         />
+                        <div class="form-text">
+                          <span
+                            id="mensajeErrorApellido"
+                            style="color: red"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="dni" class="form-label"
+                        >Número de DNI<span style="color: red">*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="dni"
+                        placeholder="Ingrese su número de DNI"
+                        required
+                        oninput="validarDNI(this.value)"
+                      />
+                      <div class="form-text">
+                        <span id="mensajeErrorDni" style="color: red"></span>
                       </div>
                     </div>
                     <div class="mb-3">
@@ -154,12 +257,10 @@
                         type="email"
                         class="form-control"
                         id="idE"
-                        aria-describedby="idEH"
                         placeholder="Ingrese su correo electrónico"
                       />
-                      <div id="idEH" class="form-text">
-                        Debe ser un correo válido.
-                        <span style="color: red">*</span>
+                      <div class="form-text">
+                        <span id="mensajeErrorCorreo" style="color: red"></span>
                       </div>
                     </div>
                   </div>
@@ -173,7 +274,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="card h-100 mb-3">
+          <div class="card h-90 mb-3">
             <div class="card-body">
               <div class="mb-3">
                 <form>
@@ -190,19 +291,25 @@
                         class="form-control"
                         id="InputPassword"
                       />
+                      <div class="form-text">
+                        <span
+                          id="mensajeErrorPassword"
+                          style="color: red"
+                        ></span>
+                      </div>
                     </div>
                     <div class="col">
-                      <div class="mb-3">
-                        <label for="InputConfirmPassword" class="form-label"
-                          >Confirme contraseña<span style="color: red"
-                            >*</span
-                          ></label
-                        >
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="InputConfirmPassword"
-                        />
+                      <label for="InputConfirmPassword" class="form-label"
+                        >Confirme contraseña<span style="color: red"
+                          >*</span
+                        ></label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="InputConfirmPassword"
+                      />
+                      <div class="form-check">
                         <input
                           type="checkbox"
                           class="form-check-input"
@@ -215,71 +322,246 @@
                     </div>
                   </div>
                 </form>
-                <input type="submit" value="ENVIAR" class="btn btn-primary" />
               </div>
             </div>
-            <div>
+            <div class="text-center">
+              <input type="submit" value="ENVIAR" class="btn btn-primary" />
+            </div>
+            <div class="card body text-center">
               <p>
                 <b><span style="color: red">* Campos Obligatorios</span></b>
+              </p>
+              <p>
+                <b
+                  ><a href="login.html" style="color: rgb(19, 19, 103)">
+                    Volver atrás
+                  </a></b
+                >
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <p>
-      <a href="../../index.html" style="color: blue">Volver atrás</a>
-    </p>
-    </div>
 
     <footer class="bg-dark text-light text-center py-3">
       <div class="container">
         <div class="row">
-          <div class=" mt-3">
+          <div class="mt-3">
             <div class="col text-center mt-3">
-            <p><a href="#" class="btn btn-primary">SUSCRIBIRSE AQUI</a></p>
+              <p><a href="#" class="btn btn-primary">SUSCRIBIRSE AQUI</a></p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 text-center ">
-            <h3>CONTACTO</h3>
-            <p>Email: <a href="mailto:librerias@libroteka.com">librerias@libroteka.com</a></p>
-            <p>Teléfono: <a href="tel:081022254276">0810 222 LIBRO (54276)</a></p>
-            <p>WhatsApp: <a href="https://web.whatsapp.com/" target="_blank">+54 9 351 1234567</a></p>
-            <p>Arrepentimiento: <a href="#">Click Aquí</a></p>
-          </div> 
-          <div class="col text-center-md-4">
-            <h3>EXPLORAR</h3>
-            <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Categorias</a></li>
-            <li><a href="#">Mas Vendidos</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-            </ul>
-          </div> 
-          <div class="col text-center-md-4">
-            <h3>MI CUENTA</h3>
-            <ul>
-              <li><a href="../../costumer/account/login.html">Ingresar</a></li>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <h3>CONTACTO</h3>
+              <p>
+                Email:
+                <a href="mailto:librerias@libroteka.com"
+                  >librerias@libroteka.com</a
+                >
+              </p>
+              <p>
+                Teléfono: <a href="tel:081022254276">0810 222 LIBRO (54276)</a>
+              </p>
+              <p>
+                WhatsApp:
+                <a href="https://web.whatsapp.com/" target="_blank"
+                  >+54 9 351 1234567</a
+                >
+              </p>
+              <p>Arrepentimiento: <a href="#">Click Aquí</a></p>
+            </div>
+            <div class="col text-center-md-4">
+              <h3>EXPLORAR</h3>
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Mas Vendidos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col text-center-md-4">
+              <h3>MI CUENTA</h3>
+              <ul>
+                <li><a href="login.html">Ingresar</a></li>
                 <li><a href="#">Ver Carrito</a></li>
                 <li><a href="#">Favoritos</a></li>
                 <li><a href="#">Finalizar Compra</a></li>
-            </ul>
-          </div>  
-        </div>
-        <div class="row">
-          <div class="container">
-            <div class="row">
-              <div class="col text-center">
-                <p>&copy; 2023 Tu Tienda online </p>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="container">
+              <div class="row">
+                <div class="col text-center">
+                  <p>&copy; 2023 Tu Tienda online</p>
+                </div>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
-  </footer>    
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
-</body>
+      </div>
+    </footer>
+
+    <div class="container-fluid position-fixed top-50">
+      <div class="row">
+        <div class="container-fluid">
+          <a href="https://facebook.com/"
+            ><i class="fa-brands fa-square-facebook fa-xl"></i
+          ></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container-fluid">
+          <a href="https://twitter.com/"
+            ><i class="fa-brands fa-square-twitter fa-xl"></i
+          ></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container-fluid">
+          <a href="https://www.whatsapp.com/"
+            ><i class="fa-brands fa-square-whatsapp fa-xl"></i
+          ></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container-fluid">
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-square-instagram fa-xl"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/6a6212d90e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /><link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- Pie de página -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- validacion Nombre -->
+    <script>
+      document
+        .getElementById("nombreInput")
+        .addEventListener("blur", function () {
+          var nombreValidar = this.value;
+          var nombreRegex = /^[a-zA-Z\-']+$/;
+          if (!nombreRegex.test(nombreValidar)) {
+            document.getElementById("mensajeErrorNombre").textContent =
+              "Debe contener caracteres alfabéticos";
+          } else {
+            document.getElementById("mensajeErrorNombre").textContent = "";
+          }
+        });
+    </script>
+    <!-- validacion Apellido -->
+    <script>
+      document
+        .getElementById("apellidoInput")
+        .addEventListener("blur", function () {
+          var apellidoValidar = this.value;
+          var apellidoRegex = /^[a-zA-Z\-']+$/;
+          if (!apellidoRegex.test(apellidoValidar)) {
+            document.getElementById("mensajeErrorApellido").textContent =
+              "Debe contener caracteres alfabéticos";
+          } else {
+            document.getElementById("mensajeErrorApellido").textContent = "";
+          }
+        });
+    </script>
+    <!-- validacion DNI -->
+    <script>
+      document.getElementById("dni").addEventListener("blur", function () {
+        var dniValidar = this.value;
+        const dniRegex = /^[0-9]{8}$/;
+        if (!dniRegex.test(dniValidar)) {
+          document.getElementById("mensajeErrorDni").textContent =
+            "Debe contener 8 dígitos";
+        } else {
+          document.getElementById("mensajeErrorDni").textContent = "";
+        }
+      });
+    </script>
+    <!-- validacion correo -->
+    <script>
+      document.getElementById("idE").addEventListener("blur", function () {
+        var emailInput = this.value;
+        var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (!emailRegex.test(emailInput)) {
+          document.getElementById("mensajeErrorCorreo").textContent =
+            "Debe ser un formato de correo válido";
+        } else {
+          document.getElementById("mensajeErrorCorreo").textContent = "";
+        }
+      });
+    </script>
+    <!-- validacion contraseña -->
+    <script>
+      document
+        .getElementById("InputPassword")
+        .addEventListener("blur", function () {
+          var passwordValidar = this.value;
+          var passwordRegex =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+          if (!passwordRegex.test(passwordValidar)) {
+            document.getElementById("mensajeErrorPassword").textContent =
+              "Debe contener al menos una minúscula, una mayúscula, un caracter especial y entre 2 y 8 caracteres.";
+          } else {
+            document.getElementById("mensajeErrorPassword").textContent = "";
+          }
+        });
+    </script>
+    <!-- verificacion repeticion de contraseña  -->
+    <script>
+      var passwordInput = document.getElementById("InputPassword");
+      var confirmPasswordInput = document.getElementById(
+        "InputConfirmPassword"
+      );
+      var mensajeErrorPassword = document.getElementById(
+        "mensajeErrorPassword"
+      );
+
+      confirmPasswordInput.addEventListener("input", function () {
+        var password = passwordInput.value;
+        var confirmPassword = confirmPasswordInput.value;
+
+        if (password === confirmPassword) {
+          mensajeErrorPassword.textContent = "";
+        } else {
+          mensajeErrorPassword.textContent = "Las contraseñas no coinciden";
+        }
+      });
+    </script>
+  </body>
 </html>
