@@ -1,33 +1,105 @@
 from book import Book
+import sqlite3
 
 class BookCRUD:
     @staticmethod
     def create_book(title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate):
-        new_book = Book(title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate)
-        Book.books.append(new_book)
-        return "Libro creado exitosamente."
-    
+        try:
+            cnx = sqlite3.connect('librotekaDB.db')  # Update the database name
+
+            cursor = cnx.cursor()
+            add_book = (
+                "INSERT INTO books "
+                "(title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            )
+
+            book_data = (title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate)
+            cursor.execute(add_book, book_data)
+
+            cnx.commit()
+
+            return "Libro creado exitosamente."
+
+        except sqlite3.Error as err:
+            return "Error: {}".format(err)
+        finally:
+            if 'cnx' in locals() and cnx is not None:
+                cursor.close()
+                cnx.close()
     @staticmethod
     def read_books():
-        return Book.books
+        try:
+            cnx = sqlite3.connect('librotekaDB.db')
+            cursor = cnx.cursor()
+
+            cursor.execute("SELECT * FROM books")
+            books = cursor.fetchall()
+
+            # Creating Book instances for better display
+            book_instances = [Book(*book) for book in books]
+
+            return book_instances
+
+        except sqlite3.Error as err:
+            print("Error:", err)
+        finally:
+            if 'cnx' in locals() and cnx is not None:
+                cursor.close()
+                cnx.close()
+
+
 
     @staticmethod
     def update_book(book_id, title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate):
-        if 0 <= book_id < len(Book.books):
-            updated_book = Book(title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate)
-            Book.books[book_id] = updated_book
+        try:
+            cnx = sqlite3.connect('librotekaDB.db')
+            cursor = cnx.cursor()
+
+            update_book = (
+                "UPDATE books SET "
+                "title=?, author=?, disponibilidad=?, price=?, sinopsis=?, editorial=?, ISBN=?, num_paginas=?, idioma=?, formato=?, clasificacion=?, publicationDate=? "
+                "WHERE id=?"
+            )
+
+            book_data = (title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate, book_id)
+
+            print("Executing SQL:", update_book)
+            print("Data:", book_data)
+
+            cursor.execute(update_book, book_data)
+
+            cnx.commit()
+
             return "Libro actualizado exitosamente."
-        else:
-            return "ID de libro no válido."
-   
+
+        except sqlite3.Error as err:
+            print("Error:", err)
+        finally:
+            if 'cnx' in locals() and cnx is not None:
+                cursor.close()
+                cnx.close()
+
     @staticmethod
     def delete_book(book_id):
-        if 0 <= book_id < len(Book.books):
-            del Book.books[book_id]
+        try:
+            cnx = sqlite3.connect('librotekaDB.db')
+            cursor = cnx.cursor()
+
+            delete_book = "DELETE FROM books WHERE id=?"
+
+            cursor.execute(delete_book, (book_id,))
+
+            cnx.commit()
+
             return "Libro eliminado exitosamente."
-        else:
-            return "ID de libro no válido."
-        
+
+        except sqlite3.Error as err:
+            print("Error:", err)
+        finally:
+            if 'cnx' in locals() and cnx is not None:
+                cursor.close()
+                cnx.close()
         
 if __name__ == "__main__":
     while True:
@@ -57,11 +129,10 @@ if __name__ == "__main__":
             result = BookCRUD.create_book(title, author, disponibilidad, price, sinopsis, editorial, ISBN, num_paginas, idioma, formato, clasificacion, publicationDate)
             print(result)
             
-            
         elif choice == "2":
             books = BookCRUD.read_books()
-            for i, book in enumerate(books):
-                print(f"ID: {i}, Título: {book.title}")
+            for book in books:
+                print(f"ID: {book.id}, Título: {book.title}, Autor: {book.author}, ISBN: {book.ISBN}")
 
         elif choice == "3":
             book_id = int(input("ID del libro a actualizar: "))
