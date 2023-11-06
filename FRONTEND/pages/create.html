@@ -191,7 +191,7 @@
           <div class="card h-100 mb-3">
             <div class="card-body">
               <div class="mb-3">
-                <form>
+                <form action="../index.html" method="post" id="miFormulario">
                   <p style="color: rgb(19, 19, 103)">
                     <strong>Información Personal</strong>
                   </p>
@@ -214,74 +214,58 @@
                       </div>
                     </div>
                     <div class="col">
-                      <div class="mb-3">
-                        <label for="apellidoInput" class="form-label"
-                          >Apellido<span style="color: red">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="apellidoInput"
-                          minlength="2"
-                          maxlength="35"
-                          required
-                          placeholder="Ingrese su apellido"
-                        />
-                        <div class="form-text">
-                          <span
-                            id="mensajeErrorApellido"
-                            style="color: red"
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="dni" class="form-label"
-                        >Número de DNI<span style="color: red">*</span></label
+                      <label for="apellidoInput" class="form-label"
+                        >Apellido<span style="color: red">*</span></label
                       >
                       <input
-                        type="number"
+                        type="text"
                         class="form-control"
-                        id="dni"
-                        placeholder="Ingrese su número de DNI"
+                        id="apellidoInput"
+                        minlength="2"
+                        maxlength="35"
                         required
-                        oninput="validarDNI(this.value)"
+                        placeholder="Ingrese su apellido"
                       />
                       <div class="form-text">
-                        <span id="mensajeErrorDni" style="color: red"></span>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="idE" class="form-label"
-                        >Dirección de email<span style="color: red"
-                          >*</span
-                        ></label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="idE"
-                        placeholder="Ingrese su correo electrónico"
-                      />
-                      <div class="form-text">
-                        <span id="mensajeErrorCorreo" style="color: red"></span>
+                        <span
+                          id="mensajeErrorApellido"
+                          style="color: red"
+                        ></span>
                       </div>
                     </div>
                   </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card h-90 mb-3">
-            <div class="card-body">
-              <div class="mb-3">
-                <form>
+                  <div class="mb-3">
+                    <label for="dni" class="form-label"
+                      >Número de DNI<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="dni"
+                      placeholder="Ingrese su número de DNI"
+                      required
+                      oninput="validarDNI(this.value)"
+                    />
+                    <div class="form-text">
+                      <span id="mensajeErrorDni" style="color: red"></span>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="idE" class="form-label"
+                      >Dirección de email<span style="color: red"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="idE"
+                      placeholder="Ingrese su correo electrónico"
+                    />
+                    <div class="form-text">
+                      <span id="mensajeErrorCorreo" style="color: red"></span>
+                    </div>
+                  </div>
                   <p style="color: rgb(19, 19, 103)">
                     <strong>Información de inicio de sesión</strong>
                   </p>
@@ -294,6 +278,7 @@
                         type="password"
                         class="form-control"
                         id="InputPassword"
+                        required
                       />
                       <div class="form-text">
                         <span
@@ -303,15 +288,14 @@
                       </div>
                     </div>
                     <div class="col">
-                      <label for="InputConfirmPassword" class="form-label"
-                        >Confirme contraseña<span style="color: red"
-                          >*</span
-                        ></label
-                      >
+                      <label for="InputConfirmPassword" class="form-label">
+                        Confirme contraseña<span style="color: red">*</span>
+                      </label>
                       <input
                         type="password"
                         class="form-control"
                         id="InputConfirmPassword"
+                        required
                       />
                       <div class="form-check">
                         <input
@@ -325,23 +309,20 @@
                       </div>
                     </div>
                   </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary">
+                      Enviar
+                    </button>
+                    <p>
+                      <strong
+                        ><a href="../index.html" style="color: rgb(19, 19, 103)"
+                          >Volver atrás</a
+                        ></strong
+                      >
+                    </p>
+                  </div>
                 </form>
               </div>
-            </div>
-            <div class="text-center">
-              <input type="submit" value="ENVIAR" class="btn btn-primary" />
-            </div>
-            <div class="card body text-center">
-              <p>
-                <b><span style="color: red">* Campos Obligatorios</span></b>
-              </p>
-              <p>
-                <b
-                  ><a href="login.html" style="color: rgb(19, 19, 103)">
-                    Volver atrás
-                  </a></b
-                >
-              </p>
             </div>
           </div>
         </div>
@@ -379,11 +360,11 @@
             <div class="col text-center-md-4">
               <h3>EXPLORAR</h3>
               <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Mas Vendidos</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="masvendidos.html">Mas Vendidos</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
               </ul>
             </div>
             <div class="col text-center-md-4">
@@ -565,6 +546,16 @@
         } else {
           mensajeErrorPassword.textContent = "Las contraseñas no coinciden";
         }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const formulario = document.getElementById("miFormulario");
+
+        formulario.addEventListener("submit", function (event) {
+          event.preventDefault();
+          window.location.href = "../index.html";
+        });
       });
     </script>
   </body>
