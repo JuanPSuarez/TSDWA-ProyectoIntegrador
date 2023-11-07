@@ -19,9 +19,11 @@
     />
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
-      <div class="container">
+  <body style="background-color: #e7e0d8">
+    <header>
+        <!-- NAVBAR  -->
+        <nav class="navbar navbar-expand-lg navbar-light py-1 fixed-top" style="background-color: #d9d1bd">
+            <div class="container">
         <a
           class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
           href="index.html"
@@ -37,14 +39,14 @@
             <i class="fa fa-shopping-cart"></i>
             <span
               class="position-absolute top-0 start-100 translate-middle badge bg-primary"
-              >5</span
+              ></span
             >
           </button>
           <button type="button" class="btn position-relative">
             <i class="fa fa-heart"></i>
             <span
               class="position-absolute top-0 start-100 translate-middle badge bg-primary"
-              >2</span
+              ></span
             >
           </button>
           <button type="button" class="btn position-relative">
@@ -93,6 +95,9 @@
               <a class="nav-link text-uppercase text-dark" href="contacto.html"
                 >contacto</a
               >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="./login.html">INGRESAR</a>
             </li>
           </ul>
         </div>
@@ -169,9 +174,9 @@
       </div>
     </div>
 
-    <div class="title text-center">
-      <div class="container">
-        <div class="row">
+    <div class="title text-center  " >
+      <div class="container ">
+        <div class="row ">
           <div class="col-md-12">
             <div class="card h-100 mb-3">
               <div class="card-body text-center">
@@ -198,6 +203,8 @@
                   ofertas, promociones e información de los últimos
                   lanzamientos.
                 </p>
+
+                <a href="create.html" class="btn btn-primary">CREAR CUENTA</a>
               </div>
             </div>
           </div>
@@ -211,7 +218,7 @@
                   Gracias por volver a visitarnos, te pedimos que ingreses tu
                   usuario y contraseña para ingresar a tu cuenta.
                 </p>
-                <form>
+                <form id="loginForm" action="procesar_login.php" method="post">
                   <div class="mb-3">
                     <label for="idE" class="form-label"
                       >Dirección de email</label
@@ -220,11 +227,11 @@
                       type="email"
                       class="form-control"
                       id="idE"
+                      name="email"
                       aria-describedby="idEH"
                     />
                     <div id="idEH" class="form-text">
                       Debe ser un correo válido.
-                      <span style="color: red">*</span>
                     </div>
                   </div>
                   <div class="mb-3">
@@ -235,6 +242,7 @@
                       type="password"
                       class="form-control"
                       id="InputPassword"
+                      name="password"
                     />
                   </div>
                   <div class="mb-3 form-check">
@@ -243,10 +251,9 @@
                       class="form-check-input"
                       id="Check"
                     />
-                    <label class="form-check-label" for="Check"
-                      >Recordarme</label
-                    >
+                    <label class="form-check-label">Recordarme</label>
                   </div>
+                  <button type="submit" class="btn btn-primary">ACCEDER</button>
                 </form>
               </div>
             </div>
@@ -255,24 +262,6 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card h-100 mb-3">
-            <div class="card-body text-center">
-              <a href="create.html" class="btn btn-primary">CREAR CUENTA</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card h-100 mb-3">
-            <div class="card-body text-center">
-              <input type="submit" value="ACCEDER" class="btn btn-primary" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -302,7 +291,7 @@
         </div>
       </div>
     </div>
-
+  </div>
     <footer class="bg-dark text-light text-center py-3">
       <div class="container">
         <div class="row">
@@ -334,17 +323,17 @@
             <div class="col text-center-md-4">
               <h3>EXPLORAR</h3>
               <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Mas Vendidos</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="masvendidos.html">Mas Vendidos</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
               </ul>
             </div>
             <div class="col text-center-md-4">
               <h3>MI CUENTA</h3>
               <ul>
-                <li><a href="login.html">Ingresar</a></li>
+                <li><a href="./login.html">Ingresar</a></li>
                 <li><a href="#">Ver Carrito</a></li>
                 <li><a href="#">Favoritos</a></li>
                 <li><a href="#">Finalizar Compra</a></li>
@@ -480,5 +469,31 @@
       integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const loginForm = document.getElementById("loginForm");
+
+      // Agrega un evento de envío del formulario
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Evita el envío predeterminado del formulario
+
+        // Simula una verificación exitosa del inicio de sesión (ajusta según tus necesidades)
+        const inicioSesionExitoso = true; // Cambia a `false` si no es exitoso
+
+        if (inicioSesionExitoso) {
+          // Muestra un mensaje de "Inicio de sesión exitoso"
+          const mensajeExito = document.createElement("div");
+          mensajeExito.className = "alert alert-success";
+          mensajeExito.textContent = "Inicio de sesión exitoso";
+
+          // Inserta el mensaje antes del formulario
+          loginForm.parentNode.insertBefore(mensajeExito, loginForm);
+
+          // Redirige a la página de inicio después de un tiempo (ajusta la URL y el tiempo)
+          setTimeout(function () {
+            window.location.href = "../index.html";
+          }, 3000); // Redirige después de 3 segundos (puedes ajustar el tiempo)
+        }
+      });
+    </script>
   </body>
 </html>
